@@ -1,7 +1,9 @@
 #!bin/bash
+PERSON1=Come  #no space before and after equal to
+PERSON=go
 
-echo "leela:: hi how  r u"
-echo "mala:: hi am good"
-echo "leela:: bye"
-echo "mala:: bye"
-echo "leela::see you again"
+echo "$PERSON1:: hi how  r u"
+echo "$PERSON2: hi am good"
+echo "$PERSON1:: bye"
+echo "$PERSON2:: OK BYE"
+echo "$PERSON1::see you again"

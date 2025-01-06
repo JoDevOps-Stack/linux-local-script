@@ -1,6 +1,6 @@
 #!bin/bash
 PERSON1=Come  #no space before and after equal to
-PERSON=go
+PERSON2=go
 
 echo "$PERSON1:: hi how  r u"
 echo "$PERSON2: hi am good"

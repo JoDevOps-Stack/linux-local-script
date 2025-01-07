@@ -15,13 +15,17 @@ if [ $? -ne 0 ]
   exit 1
   else
       echo "installing mysql success..."
+      
+      fi
+
       dnf install git -y
+      
       if [ $? ne 0 ]
       then
          echo "installing git failure.."
          exit 1
    else
-   echo "installing git successs...."
+      echo "installing git successs...."
    
    fi
          

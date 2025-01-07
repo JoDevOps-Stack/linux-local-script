@@ -10,4 +10,4 @@ else
 if [$USERID eq 0]
 then 
     echo "you can continue"
-    fi
+ fi

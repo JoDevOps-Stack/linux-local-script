@@ -1,4 +1,5 @@
-#!bin/bash
+#!/bin/bash
+
 USERID=$(id -u)
 R="\e[31m"
 G="\e[32m"
@@ -28,7 +29,7 @@ then
      exit 1
 fi
 
- dnf  list installed mysql &>>$LOG_FILE_NAME
+ dnf list installed mysql &>>$LOG_FILE_NAME
 
   if [ $? -ne 0 ]
   then # not installed
@@ -43,9 +44,9 @@ fi
       
       fi
   else
-      echo  -e " mysql is already  $Y installed"
+      echo -e " mysql is already  $Y installed"
    fi
-dnf  list installed git &>>$LOG_FILE_NAME
+dnf list installed git &>>$LOG_FILE_NAME
      if [ $? -ne 0 ]
      then
       dnf install git -y &>>$LOG_FILE_NAME

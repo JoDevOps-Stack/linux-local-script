@@ -8,7 +8,7 @@ Y="\e[33m"
 LOGS_FOLDER="/var/log/shellscript"
 LOG_FILE=$(echo $0 | cut -d "." -f1 )
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
-LOG_FILE_NAME="$LOGS_FOLDER/$LOG_FILE-$TIMESTAMP.log"
+LOG_FILE_NAME="$LOGS_FOLDER/$LOG_FILE-$TIMESTAMP.log"  # 
 mkdir -p $LOGS_FOLDER
 
 VALIDATE(){
@@ -76,6 +76,25 @@ CHECK_ROOT(){
 echo "Script started executing at: $TIMESTAMP" &>>$LOG_FILE_NAME
 
 CHECK_ROOT
+
+dnf list installed mysql &>>$LOG_FILE_NAME
+
+  if [ $? -ne 0 ]
+  then # not installed
+    dnf install mysql -y &>>$LOG_FILE_NAME
+    VALIDATE $? "installing mysql"
+   if [ $? -ne 0 ]
+  then
+      echo " installing mysql failure"
+  exit 1
+  else
+      echo "installing mysql success..."
+      
+      fi
+  else
+      echo -e " mysql is already  $Y installed"
+   fi
+
 
 for package in $@
 do

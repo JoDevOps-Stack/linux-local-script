@@ -19,7 +19,7 @@ VALIDATE()
     else
         echo -e "$2 ... $G SUCCESS $N"
     fi
-}
+
 
 echo "Script started executing at: $TIMESTAMP" &>>$LOG_FILE_NAME
 

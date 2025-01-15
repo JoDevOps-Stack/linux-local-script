@@ -42,6 +42,7 @@ while read -r file
 
 do
      echo "deleting file: $file"
+     rm -rf $file                 #removing deleted files"
 
 done <<< $FILES_TO_DELETE
 

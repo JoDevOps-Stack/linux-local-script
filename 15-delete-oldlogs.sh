@@ -33,7 +33,7 @@ then
  fi
 }
 
-echo "script started executing at: $TIMESTAMP" &>>$LOG_FILE_NAME
+echo "script started executing at: $TIMESTAMP"  &>>$LOG_FILE_NAME
 
 FILES_TO_DELETE=$(find $SOURCE_DIR -name "*.log" -mtime +14)  # "to find files to be deleted"
 echo "files to be deleted: $FILES_TO_DELETE"

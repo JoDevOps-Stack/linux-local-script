@@ -46,7 +46,7 @@ fi
 if [ ! -d $SOURCE_DIR ]
 then
    echo -e "$SOURCE_DIR does not exists...please check"
-   exit1
+   exit 1
 fi
 
 if [ ! -d $DEST_DIR ]

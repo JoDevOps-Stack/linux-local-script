@@ -12,7 +12,7 @@ DAYS=${3:-14} # if user is not providing no. of days,we are taking 14 as default
 
 
 
-LOGS_FOLDER="/home/ec2-user/expenselogs"
+LOGS_FOLDER="/home/ec2-user/expense-logs"
 LOG_FILE=$(echo $0 | cut -d "." -f1 )
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
 LOG_FILE_NAME="$LOGS_FOLDER/$LOG_FILE-$TIMESTAMP.log"  # 

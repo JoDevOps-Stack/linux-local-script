@@ -56,9 +56,9 @@ then
 fi
 echo "script started executing at: $TIMESTAMP"  &>>$LOG_FILE_NAME
 
-FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
+FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS) #to find the files
 
-if [ -n $FILES ]   #here checking if files are there are not.
+if [ -n "$FILES" ]   #here checking if files are there are not.
 then
 echo "Files are: $FILES"
 else

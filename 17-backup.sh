@@ -43,5 +43,15 @@ then
 
 fi
 
+if [ ! -d $SOURCE_DIR ]
+then
+   echo -e "$SOURCE_DIR does not exists...please check"
+   exit1
+fi
 
+if [ ! -d $DEST_DIR ]
+then
+   echo -e "$DEST_DIR does not exists...please check"
+   exit1
+fi
 echo "script started executing at: $TIMESTAMP"  &>>$LOG_FILE_NAME

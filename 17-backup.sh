@@ -49,7 +49,7 @@ then
    exit 1
 fi
 
-if [ ! -d $DEST_DIR ]
+if [ ! -d $DEST_DIR ] #to check directory exists or not, here 'd' for directory
 then
    echo -e "$DEST_DIR does not exists...please check"
    exit 1
@@ -58,9 +58,12 @@ echo "script started executing at: $TIMESTAMP"  &>>$LOG_FILE_NAME
 
 FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS) #to find the files
 
-if [ -n "$FILES" ]   #here checking if files are there are not.
+if [ -n "$FILES" ]   #here checking if files are there are not to zip
 then
-echo "Files are: $FILES"
+    echo "Files are: $FILES"
+    ZIP_FILE="$DEST_FILE/app-logs-$TIMESTAMP.zip"
+    find $SOURCE_DIR -name "*.log" -mtime +$DAYS | zip -@ "$ZIP_FILE"
+
 else
-echo "no files to zip"
+    echo "no files to zip"
 fi

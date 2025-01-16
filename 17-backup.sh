@@ -52,7 +52,7 @@ fi
 if [ ! -d $DEST_DIR ]
 then
    echo -e "$DEST_DIR does not exists...please check"
-   exit1
+   exit 1
 fi
 echo "script started executing at: $TIMESTAMP"  &>>$LOG_FILE_NAME
 

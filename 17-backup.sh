@@ -33,7 +33,7 @@ USAGE(){
     echo -e "$R USAGE:: $N sh 17-backup.sh <SOURCE_DIR> <DEST_DIR> <DAYS(optional)>"
 }
 
-if [ $# -lt 2]
+if [ $# -lt 2 ]
 
 then
     
